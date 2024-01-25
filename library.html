@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My library</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+    </header>
+<main>
+    <div class="library">
+        <!--APPEND NEW BOOKS HERE-->
+
+        <!--FORM: NEW BOOK -->
+        <form>
+            <h2>New book</h2>
+            <label>
+                Title:
+                <input type="text" placeholder="Abc" id="title" name="title" autofocus required>
+            </label>
+            <label>
+                Author:
+                <input type="text" placeholder="Def" id="author" name="author" required>
+            </label>
+            <label>
+                Pages:
+                <input type="number" placeholder="123" min="1" id="pages" name="pages" required>
+            </label>
+            <label>
+                Read:
+                <input type="number" placeholder="12" min="0" id="read" name="read" required>
+            </label>
+            <button type="submit" id="submit" name="submit" onclick="makeNewBook(this.form)" >
+                Add
+            </button>
+        </form>
+    </div>
+</main>
+<footer>
+    <p>Crafted by <a href="https://capeya.me">Capeya</a></p>
+</footer>
+</body>
+</html>
+<script src="./script.js" defer></script>

@@ -1,0 +1,115 @@
+:root {
+    --color-1st: black; 
+    --color-2nd: wheat;
+    --color-3rd: white;
+}
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    color: inherit;
+}
+html {
+    height: 100%;
+}
+body {
+    font-size: 1.1rem;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+}
+header,
+footer {
+    background-color: black;
+    color: var(--color-2nd);
+    padding: 1rem;
+    min-height: 5vh;
+
+    display: flex;
+    align-items: center;
+}
+main {
+    flex: 1;
+    background-color: wheat;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+.library {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+}
+form,
+.book {
+    height: 300px;
+    width: 200px;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 20px;
+    background-color: var(--color-3rd);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+}
+/* FORMS */
+label{
+    display: block;
+}
+input {
+    background-color: var(--color-2nd);
+    border-radius: 5px;
+    font-size: inherit;
+    font-family: inherit;
+    padding: 1px 0;
+    padding-left: 1ch;
+}
+a {
+    color: white;
+}
+/* BOOK */
+.edit{
+    border-bottom: 1px solid orange;
+}
+.edit:hover,
+.edit:focus {
+    color: orange;
+    font-weight: 600;
+    border-width: 2px;
+    border-color: blue;
+}
+/* BUTTON */
+button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+
+    border: 2px solid var(--color-1st);
+    border-radius: 10px;
+    font-weight: bold;
+    background: white;
+
+    height: 2.5rem;
+    width: 5rem;
+}
+#submit {
+    background-color: rgb(127, 255, 0, 50%);
+}
+.remove:hover,
+.remove:focus {
+    background-color: rgb(255, 0, 0, 50%);
+}
+
+@media only screen and (max-width: 520px) {
+    .library {
+        justify-content: center;
+        }
+  }
